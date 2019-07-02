@@ -1,4 +1,4 @@
 # soyeon2019
-2019-04-02
-2019 soyeon portfolio project
+2019년 김소연 포트폴리오
+**2019년 버전**
 
