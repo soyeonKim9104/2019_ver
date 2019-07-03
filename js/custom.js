@@ -41,7 +41,9 @@ $(document).ready(function(){
                 });
             },
             customSelect : function() {
-
+                $('.js-sel-open').click(function (e) {
+                    $('.opener').toggleClass('active');
+                });
             }
         };
         return common;

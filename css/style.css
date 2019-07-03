@@ -401,23 +401,47 @@ custom style - START
 
 #header .ver {
     right: 2%;
-    border: 1px solid #ddd;
 }
 
-#header .ver li {
+#header .ver span{
+    display: block;
+    border: 1px solid #ddd;
+    width: 80px;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+#header .ver ul {
     display: none;
-    padding: 5px 15px 5px 20px;
+    background: #fff;
+    width: 80px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#header .ver li{
+    height:35px;
+    padding-left:10px;
 }
 
 #header .ver li a {
     text-align: left;
-}
-
-#header .ver li.active {
     display: block;
+    line-height: 35px;
 }
 
-#header .ver li:after {
+#header .ver li:hover{
+    background:#eee;
+}
+
+#header .ver ul.active {
+    display: block;
+    position: absolute;
+}
+
+#header .ver span:after {
     content: "\e943";
     font-family: xeicon!important;
     display: inline-block;
@@ -492,6 +516,28 @@ custom style - START
     flex: 1;
 }
 
+.foot-con .footer-logo{
+    font-size: 34px;
+    line-height: 42px;
+}
+.foot-con .foot-introduction{
+    margin-top: 30px;
+}
+.foot-con .foot-introduction li{
+    font-size: 14px;
+    color: #666;
+}
+
+.foot-con .foot-introduction li + li{
+
+    margin-top: 10px;
+}
+
+.foot-con .foot-introduction li a{
+    margin-left: 4px;
+    border-bottom: 1px solid #666;
+}
+
 .key_v {
     position: relative;
     width: 100%;
@@ -504,7 +550,7 @@ custom style - START
 }
 
 .main_v_wrap {
-    height:1000px;
+    height:55vw;
     padding: 0;
     min-height: 35rem;
     background: rgb(119,117,252);
@@ -542,7 +588,7 @@ custom style - START
 
 .key_v.type2 .scroll {
     position: absolute;
-    bottom: 11%;
+    bottom:4%;
     text-align: center;
     left: 50%;
 }
@@ -558,6 +604,24 @@ custom style - START
     background: #fff;
     margin: 0 auto 15px;
     position: relative;
+    -webkit-animation: moveupdown 2s linear;
+    -moz-animation: moveupdown 2s linear;
+    animation: moveupdown 2s linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveupdown {
+    0% {
+        margin-bottom:0px;
+    }
+    50% {
+        margin-bottom:18px;
+    }
+    100% {
+        margin-bottom:0px;
+    }
 }
 
 .key_v.type2 .scroll .s_icon:before {
